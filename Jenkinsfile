@@ -8,13 +8,13 @@ pipeline {
         JAVA_HOME = tool 'Java'
     }
     stages {
-        stage('Checkout') {
+        stage('Checking the app') {
             steps {
                 git url: 'https://github.com/KatsiarynaKa/final_project.git', branch: 'main'
             }
         }
 
-        stage('Compile') {
+        stage('Compile the java file') {
             steps {
                 bat 'if not exist build\\classes mkdir build\\classes'
                 bat '"%JAVA_HOME%\\bin\\javac" -d build\\classes Calculator.java'
@@ -34,11 +34,10 @@ pipeline {
             }
         }
 
-        stage('Run') {
+        stage('Run the app') {
             steps {
                bat '"%JAVA_HOME%\\bin\\java" -jar build\\jar\\MyApplication.jar'
             }
         }
     }
 }
-
