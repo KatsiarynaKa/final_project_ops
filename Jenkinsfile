@@ -22,7 +22,7 @@ pipeline {
 
         stage('Prepare Manifest') {
             steps {
-               bat 'echo Calculator-Class: Main > build\\classes\\MANIFEST.MF'
+               bat 'echo Calculator: Main > build\\classes\\MANIFEST.MF'
             }
         }
         
