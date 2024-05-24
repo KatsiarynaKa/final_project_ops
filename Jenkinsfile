@@ -17,7 +17,7 @@ pipeline {
         stage('Compile') {
             steps {
                 bat 'if not exist build\\classes mkdir build\\classes'
-                bat '"%JAVA_HOME%\\bin\\javac" -d build\\classes Main.java'
+                bat '"%JAVA_HOME%\\bin\\javac" -d build\\classes app-test.java'
             }
         }
 
