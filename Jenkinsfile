@@ -16,14 +16,14 @@ pipeline {
 
         stage('Compile the java file') {
             steps {
-               def buildCommand = "javac -d build src/Calculator.java"
+               bat buildCommand = "javac -d build src/Calculator.java"
             }
         }
 
         
         stage('Package') {
             steps {
-            def packageCommand = "jar cvf Calculator.jar -C build ."
+            bat packageCommand = "jar cvf Calculator.jar -C build ."
             }
         }
 
