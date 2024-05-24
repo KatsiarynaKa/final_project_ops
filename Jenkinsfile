@@ -16,7 +16,7 @@ pipeline {
 
         stage('Compile the java file') {
             steps {
-               bat buildCommand = "javac -d build src/Calculator.java"
+               bat buildCommand = "javac -d build Calculator.java"
             }
         }
 
