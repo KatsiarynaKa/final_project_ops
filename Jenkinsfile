@@ -28,7 +28,7 @@ pipeline {
         
         stage('Package') {
             steps {
-            bat packageCommand = "jar cvf Calculator.jar -C build ."
+            bat packageCommand = "jar cvmf MANIFEST.MF Calculator.jar -C build ."
             }
         }
 
