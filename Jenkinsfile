@@ -21,11 +21,6 @@ pipeline {
             }
         }
 
-        stage('Prepare Manifest') {
-            steps {
-            bat 'echo Main-Class: Main > build\\classes\\MANIFEST.MF'
-            }
-        }
 
         stage('Package') {
             steps {
