@@ -42,7 +42,6 @@ pipeline {
         steps {
             script {
                 echo 'incrementing app version...'
-                bat 'mvn -v'
                 bat 'mvn build-helper:parse-version versions:set \
                     -DnewVersion=\\\${parsedVersion.majorVersion}.\\\${parsedVersion.minorVersion}.\\\${parsedVersion.nextIncrementalVersion} \
                     versions:commit'
